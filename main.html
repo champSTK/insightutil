@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Insight Util</title>
+<link rel="stylesheet" type=text/css href="main.css">
+</head>
+<body>
+<h1 id="app-title">Insight Util</h1>
+
+<div class="top-bar" role="region" aria-label="Top bar with search and battery status">
+  <form class="google-search" action="https://www.google.com/search" method="GET" target="_blank" role="search" aria-label="Google search form">
+    <input type="search" name="q" placeholder="Search Google..." aria-label="Search Google" autocomplete="off" />
+  </form>
+  <div class="battery-container" aria-label="Battery status" role="img" title="Battery Status">
+    <div class="battery-icon" aria-hidden="true">
+      <div class="battery-level" id="battery-level" style="width: 0%"></div>
+    </div>
+    <span id="battery-percentage">--%</span>
+  </div>
+</div>
+
+<div class="device-info" role="region" aria-label="Device Information" id="device-info">
+  Detecting user info...
+</div>
+
+<div class="date-time" role="region" aria-live="polite" aria-atomic="true" id="date-time">
+  --:--:-- --
+</div>
+
+<div class="usage-container" role="region" aria-label="System resource usage">
+  <div class="usage-item" id="cpu-usage">
+    <div class="usage-header">
+      <span>CPU Usage</span>
+      <span id="cpu-percent">0%</span>
+    </div>
+    <div class="bar-container" aria-label="CPU usage bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div class="usage-bar" id="cpu-bar"></div>
+    </div>
+    <div class="usage-numbers" id="cpu-details">Usage: 0% / Total: 100%</div>
+  </div>
+
+  <div class="usage-item" id="gpu-usage">
+    <div class="usage-header">
+      <span>GPU Usage</span>
+      <span id="gpu-percent">0%</span>
+    </div>
+    <div class="bar-container" aria-label="GPU usage bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div class="usage-bar" id="gpu-bar"></div>
+    </div>
+    <div class="usage-numbers" id="gpu-details">Usage: 0% / Total: 100%</div>
+  </div>
+</div>
+<button class="speedtest-btn" id="speedtest-btn" aria-label="Open Speedtest website">Run Speedtest</button>
+<div class="footer">Made with basic html css js.</div>
+<script src="main.js"></script>
+</body>
+</html>
+
